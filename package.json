@@ -4,13 +4,12 @@
     "description": "Online Book Library Single Page Application",
     "main": "index.html",
     "scripts": {
-        "test": "mocha tests"
+        "test-ui" : "npx playwright test tests/ui.test.js"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "playwright-chromium": "1.9.2",
-        "mocha": "8.3.2",
-        "chai": "4.3.4"
+        "@playwright/test": "^1.42.1",
+        "playwright-chromium": "1.9.2"
     }
 }
