@@ -6,6 +6,8 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
+  repository_dispatch:
+    types: trigger-ui-test
 
 jobs:
   run-ui-tests:
