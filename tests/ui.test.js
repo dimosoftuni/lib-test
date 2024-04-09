@@ -184,7 +184,8 @@ test('Verify redirection of Logout link after user login', async ({ page }) => {
 
   const logoutLink = await page.$('a[href="javascript:void(0)"]');
   await logoutLink.click();
+  await page.waitForURL('https://staging-lib-fe.onrender.com/');
 
   const redirectedURL = page.url();
-  expect(redirectedURL).toBe('https://staging-lib-fe.onrender.com/catalog');
+  expect(redirectedURL).toBe('https://staging-lib-fe.onrender.com/');
 });
